@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@500&family=Poppins:wght@300;400;500&family=Roboto:wght@300;400&family=Ubuntu&family=Ubuntu+Condensed&family=Varela+Round&display=swap');
+*, *::before, *::after{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;    
+}
+body, html{
+       font-size: 16px;
+       font-family: "Lato", sans-serif;
+       line-height: 1.5;
+}
+a{
+     text-decoration: none;
+}
+.top{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2
+      ;
+      height: 50px;
+      width: 100%;
+      box-shadow: 0 5px 2px rgba(0,0,0,0.2);
+}
+.bar{
+      background-color: #f1f5f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.left_side_of_bar{
+      display: flex;
+      /* align-items: center; */
+}
+.bar-item{
+       color: #000;
+       display: inline-block;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       padding: 14px 14px;
+       text-align: center;
+       transition: all 0.3s linear;
+}
+.bar-item:hover{
+      background: #333;
+      color: #fff;
+}
+.left_side_of_bar .merch{
+        display: none;
+}
+.left_side_of_bar .bars{
+      display: none;
+}
+.bar_dropdown{
+       position: relative;
+}
+.bar_dropdown_btn{
+     padding: 14px 14px;
+     background-color: #f1f5f9;
+     border: none;
+     color: #000;
+     font-size: 1rem;
+     cursor: pointer;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     line-height: 1.5;
+     transition: all 0.3s linear;
+}
+.bar_dropdown:hover .bar_dropdown_btn{
+        background-color: #333;
+        color: #fff;
+}
+.bar_dropdown_content{
+      position: absolute;
+      min-width: 180px;
+      background-color: #000;
+      box-shadow: 0 5px 2px rgba(0,0,0,0.1);
+      z-index: 1;
+      display: none;
+      transition: all 0.3s linear;
+}
+.bar_dropdown:hover .bar_dropdown_content{
+       display: block;
+}
+.bar_dropdown_content a{
+     display: block;
+     padding: 10px 12px;
+     color: #fff;
+     transition: all 0.3s linear;
+}
+.bar_dropdown_content a:hover{
+       background: #333;
+}
+
+.right_side_of_bar button{
+       border: none;
+       background: inherit;
+       color: #000;
+       padding: 14px 14px;
+       font-size: 1rem;
+       line-height: 1.5;
+       cursor: pointer;
+       transition: all 0.3s linear;
+}
+.right_side_of_bar button:hover{
+        background: red;
+        color: #fff;
+}
+
+@media screen and (max-width: 480px){
+      .left_side_of_bar{
+             display: block;
+             width: 100%;
+             position: relative;
+      }  
+      .left_side_of_bar a:not(:first-child){
+                display: none;
+        }
+        .bar_dropdown{
+              display: none;
+        }
+        .left_side_of_bar a.bars{
+               display: block;
+               float: right;
+               position: absolute;
+               top: 0;
+               right: 0;
+               /* line-height: 1.5; */
+        }
+
+        .right_side_of_bar{
+              display: none;
+        }
+}
+@media screen and (max-width: 480px){
+      .left_side_of_bar.change_nav_bar{
+               position: relative;
+               width: 100%;
+      }
+      .left_side_of_bar.change_nav_bar a.bars{
+               position: absolute;
+               top: 0;
+               right: 0;
+      }
+      .left_side_of_bar.change_nav_bar a{
+             display: block;
+             text-align: left;
+      }
+      .left_side_of_bar.change_nav_bar a.merch{
+            display: block;
+      }
+}
+
+.slideShow{
+       position: relative;
+       overflow: hidden;
+}
+
+.slides img{
+       vertical-align: middle;
+}
+.slides{
+       display: none;
+}
+.slide_caption{
+     position: absolute;
+     bottom: 0;
+     z-index: 1;
+     text-align: center;
+     color: red;
+     width: 100%;
+     padding: 32px;
+     color: #fff;
+     font-weight: 400;
+}
+.slide_caption h3{
+       font-size: 24px;
+       text-transform: capitalize;
+       letter-spacing: 1px;
+       margin: 10px 0;
+}
+
+@media screen and (max-width: 480px){
+          .slide_caption{
+                display: none;
+          }
+}
+.container{
+        max-width: 800px;
+        margin: 0 auto;
+}
+#band{
+        font-weight: 400;
+}
+.padding-64{
+        padding: 64px;
+}
+.text_center{
+        text-align: center;
+}
+.text_spacing{
+        letter-spacing: 4px;
+        text-transform: uppercase;
+}
+.margin-10{
+       margin: 10px 0;
+}
+.text_grey{
+       color: gray;
+}
+.text_justify{
+        text-align: justify;
+}
+.margin-15{
+       margin: 15px 0;
+}
+.padding_32{
+       padding: 32px 0;
+}
+.team{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+}
+.team_item img{
+        border-radius: 5px;
+}
+@media only screen and (max-width: 480px){
+       .team{
+              grid-template-columns: auto;
+              grid-template-rows: 1fr 1fr 1fr !important;
+       }
+}
+
+#tour{
+        background-color: #000;
+}
+.text_white{
+        color: #fff;
+}
+.tour_list{
+     list-style-type: none;
+     background-color: #fff;
+     border: 1px solid #ccc;
+}
+.text_black{
+        color: #000;
+}
+.list_item{
+        border-bottom: 1px solid #ccc;
+        padding: 8px 16px;
+}
+.tag{
+        background-color: red;
+        color: #fff;
+        padding: 2px 8px;
+        text-transform: capitalize;
+        margin-left: 16px;
+}
+.badge{
+       background: #000;
+       padding: 0 8px;
+       border-radius: 50%;
+       float: right;
+       color: #fff;
+       margin-right: 16px;             
+}
+
+.product{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+}
+img{
+       vertical-align: middle;
+}
+.product-item img{
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.3s linear;
+} 
+.product-item img:hover{
+        opacity: 0.6;
+}
+.product_info{
+       background-color: #fff;
+       padding: 0.01em 16px;
+}
+
+.margin-16{
+        margin-bottom: 16px;
+}
+ .product_info button{
+       background-color: #000;
+       color: #fff;
+       border: none;
+       cursor: pointer;
+       padding: 8px 16px;
+       text-transform: capitalize;
+       font-size: 1rem;
+       transition: all 0.3s linear;
+ }
+ .product_info button:hover{
+       background: #ccc;
+       color: #000;
+ }
+
+ @media screen and (max-width: 480px){
+      .product{
+          grid-template-columns: auto;
+          grid-template-rows: repeat(3, 1fr);
+      }       
+ }
+ 
+ #ticketModal{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      overflow: hidden;
+      z-index: 3;
+      padding-top: 100px;      
+ }
+ div.show_ticketModal{
+        display: block !important;
+ }
+ .modal-content{
+        width: 900px;
+        margin: auto;
+        position: relative;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+        animation: animatetop 0.4s;
+        padding-top: 30px;
+ }
+
+ header{
+        background: #009688;
+        text-align: center;
+        padding: 32px;
+        position: relative;
+ }
+.times{
+   position: absolute;
+   top: 5px;
+   color: #fff;
+   cursor: pointer;
+   right: 10px;
+   font-size: 25px;
+
+}
+header h2{
+       letter-spacing: 4px;
+       color: #fff;
+       font-weight: 400;
+}
+.modal-container{
+       background-color: #ffff;
+       padding: 0.01rem 16px;
+}
+label{
+        display: block;
+        padding: 15px 0;
+}
+input{
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 8px;
+        outline: none;
+}
+button[type="submit"]{
+       width: 100%;
+       border: none;
+       padding: 8px;
+       margin: 15px 0;
+       background-color: #009688;
+       color: #fff;
+}
+
+.form_footer{
+       display: flex;
+       justify-content: space-between;
+       margin-bottom: 16px;
+}
+button#cls{
+       text-transform: capitalize;
+       letter-spacing: 1px;
+       padding: 8px 10px;
+       background-color: red;
+       color:  #ffff;
+       font-weight: 500;
+       border: none;
+       transition: all 0.3s linear;
+}
+button#cls:hover{
+       background-color: #ccc;
+       color: #000;
+}
+
+@keyframes animatetop {
+       0%{
+              top: -300px;
+              opacity: 0;
+       }
+
+       100%{
+              top: 0%;
+              opacity: 1;
+       }
+       
+}
+
+@media screen and (max-width: 768px) {
+      #ticketModal{
+          padding-top: 30px !important;
+      }
+       .modal-content{
+           width:  600px;
+           /* margin: 0 10px; */
+       }      
+          
+   }
+
+@media screen and (max-width: 480px) {
+       #ticketModal{
+              padding-top: 30px !important;
+          }
+       .modal-content{
+        width: auto !important;
+        margin: 0 10px;
+    }      
+       
+}
+
+.contact_row{
+       display: grid;
+       font-size: 18px !important;
+       grid-template-columns: repeat(2, 1fr);
+}
+
+.form_row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 8px;;
+}
+
+.sendBtn{
+       width: auto !important;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       padding: 8px 16px !important;
+       float: right;
+       background-color: #000 !important;
+}
+
+form::after{
+       content: "";
+       clear: both;
+       display: block;
+}
+
+@media screen and (max-width: 480px){
+       .contact_row{
+              grid-template-columns: auto;
+
+       }
+       .form_row{
+              grid-template-columns: auto;
+       }
+       div.contact_row > div.contact_col{
+              margin-bottom: 16px !important;
+              white-space: nowrap !important;
+       }
+}
+.grey-scale{
+     filter: grayscale(50%);
+     object-fit: cover;
+}
+.social_media_icons{
+     filter: grayscale(50%);
+     text-align: center;
+     cursor: pointer;
+}
+
+.social_media_icons i:hover{
+        opacity: 0.6;
+}
+
+.social_media_icons + p{
+       letter-spacing: 1px;
+       text-transform: capitalize;
+       vertical-align: middle;
+}
+
+.text_blue{
+        color: blue;
+        cursor: pointer;
+        user-select: none;
+}
